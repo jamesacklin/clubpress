@@ -82,6 +82,12 @@ article:after{content:" ";display:block;clear:both}
 .page .entry-sidebar{padding:1.6949152542%;width:100%;float:left;margin-left:0;margin-right:0}
 .page .entry-footer{padding:1.6949152542%;clear:both;width:100%;float:left;margin-left:0;margin-right:0;border-top:1px solid #eceeef}
 .site-info{text-align:center;font-size:80%}
+blockquote{margin:0;font-style:italic}
+blockquote p{margin-top:0}
+blockquote cite{font-style:normal;font-size:.9rem;text-align:right;font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.front-testimonials{max-width:1200px;margin-left:auto;margin-right:auto;background:#eceeef}
+.front-testimonials:after{content:" ";display:block;clear:both}
+.front-testimonials .jetpack-testimonial{padding:3.4482758621%}
 .form-row{margin:0 0 1.5em}
 .control-label{display:block;margin:.25em 0;font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .form-row-disabled .control-label{color:#818a91}
@@ -95,6 +101,8 @@ article:after{content:" ";display:block;clear:both}
 .page .entry-content{width:83.0508474576%;float:left;margin-right:1.6949152542%;margin-left:8.4745762712%}
 .page .entry-sidebar ~ .entry-content{width:57.6271186441%;float:right;margin-right:0}
 .page .entry-sidebar{width:40.6779661017%;float:left;margin-right:1.6949152542%}
+.front-testimonials .jetpack-testimonial{width:32.2033898305%;float:left;margin-right:1.6949152542%;padding:1.6949152542%}
+.front-testimonials .jetpack-testimonial:nth-child(3n){width:32.2033898305%;float:right;margin-right:0}
 }@media screen and (min-width:800px){.main-navigation ul{text-align:right}
 .main-navigation li{display:inline-block}
 .menu-toggle{display:none}

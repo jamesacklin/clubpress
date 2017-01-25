@@ -302,10 +302,33 @@ article {
 
 
 
+blockquote {
+  margin: 0;
+  font-style: italic;
+  p { margin-top: 0; }
+  cite {
+    font-style: normal;
+    font-size: 0.9rem;
+    text-align: right;
+    font-family: $font-family-sans-serif;
+  }
+}
 
 
 
 
+.front-testimonials {
+  @include container;
+  background: $gray-lighter;
+  .jetpack-testimonial {
+    padding: gutter(6);
+    @include susy-breakpoint(800px, 12){
+      @include span(4);
+      padding: gutter();
+      &:nth-child(3n){ @include span(4 last); }
+    }
+  }
+}
 
 
 
