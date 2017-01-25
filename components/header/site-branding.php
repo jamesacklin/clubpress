@@ -1,15 +1,12 @@
 		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<?php
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				if ( has_custom_logo() ) {
+				    echo '<img src="'. esc_url( $logo[0] ) .'">';
+				} else {
+				    echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
+				} ?>
+			</a>
 		</div><!-- .site-branding -->
