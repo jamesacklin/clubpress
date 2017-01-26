@@ -37,7 +37,7 @@ $screen-lg: 60rem;
 
 $susy: (
   columns: 12,
-  container: 1200px,
+  container: 1366px,
   gutters: 1/4,
   global-box-sizing: border-box
 );
@@ -52,7 +52,7 @@ html {
 body {
   font-family: $font-family-serif;
   text-rendering: optimizeLegibility;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   color: #333333;
   background: $white;
@@ -196,6 +196,7 @@ p, li {
     }
     li {
       display: inline-block;
+      padding: gutter(24);
     }
   }
 }
@@ -293,8 +294,12 @@ article {
 
 
 .site-info {
+  padding: gutter();
+  background: $brand-primary;
+  color: $white;
   text-align: center;
   font-size: 80%;
+  a { color: $white; }
 }
 
 
@@ -335,17 +340,36 @@ blockquote {
 
 
 
+.homepage-features {
+  @include container();
+  padding: gutter();
+  .homepage-feature {
+    // padding: gutter();
+    @include susy-breakpoint(800px, 12){
+      @include span(4);
+      &:nth-child(3n){ @include span(4 last); }
+      &:last-child{
+        @include span(8);
+        @include push(2);
+        text-align: center;
+      }
+    }
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+.homepage-feature {
+  h2 {
+    font-size: 1.4rem;
+    color: $brand-primary;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  h3 {
+    margin-top: 0;
+    font-size: 0.9rem;
+    color: $gray-dark;
+  }
+}
 
 
 
