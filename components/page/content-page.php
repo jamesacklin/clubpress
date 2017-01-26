@@ -28,14 +28,12 @@
 		<?php if ( have_rows( 'feature_grid' ) ) : ?>
 			<div class="feature-grid" columns=<?php echo the_field( 'feature_columns' ); ?>>
 				<?php while ( have_rows( 'feature_grid' ) ) : the_row(); ?>
-					<?php if ( get_sub_field( 'feature_illustration') ) { ?>
-						<div class="feature double">
+					<div class="feature">
+						<?php if ( get_sub_field( 'feature_illustration') ) { ?>
 							<div class="image">
 								<img src="<?php the_sub_field( 'feature_illustration' ); ?>" />
 							</div>
-						<?php } else { ?>
-							<div class="feature">
-						<?php }?>
+						<?php } ?>
 						<div class="text">
 							<?php if (get_sub_field ('feature_name')) { ?>
 								<h3><?php the_sub_field( 'feature_name' ); ?></h3>

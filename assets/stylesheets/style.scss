@@ -21,7 +21,7 @@ $gray-light: #818a91 !default;
 $gray-lighter: #eceeef !default;
 $gray-lightest: #f7f7f9 !default;
 $white: #ffffff !default;
-$brand-primary: #37b34a !default;
+$brand-primary: #36B349 !default;
 $brand-success: #0275d8 !default;
 $brand-info: #5bc0de !default;
 $brand-warning: #f0ad4e !default;
@@ -520,13 +520,8 @@ blockquote {
   .feature {
     padding: gutter();
     display: flex;
-    text-align: center;
-    &.double {
-      align-items: center;
-      text-align: left;
-      .image { width: 33%; }
-      .text { width: 66%; }
-    }
+    .image { width: 33%; }
+    .image + .text { width: 66%; }
     p { padding-top: 0; margin-top: 0; font-family: $font-family-serif; font-weight: 500; font-size: 1.1rem; hyphens: none;}
     h3 { color: $brand-primary; margin-bottom: 0.25em; padding-bottom: 0; }
 
