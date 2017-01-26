@@ -28,7 +28,7 @@ get_header(); ?>
 					</div>
 					<div class="demo">
 						<div class="phone-slideshow">
-
+							<img src="http://apps4clubz.com/images/mockup-events.jpg">
 						</div>
 					</div>
 				</div>
@@ -60,6 +60,12 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php get_template_part('components/features/testimonials/testimonials'); ?>
+
+			<article>
+				<div class="entry-content">
+					<?php the_content(); ?>
+				</div>
+			</article>
 		</main>
 	</div>
 <?php get_footer(); ?>
