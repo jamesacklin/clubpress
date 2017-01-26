@@ -38,6 +38,9 @@ html {
     hyphens: auto;
 }
 
+html { overflow-x: hidden; }
+
+
 *,
 *:after,
 *:before {
@@ -256,6 +259,7 @@ p {}
 
 article {
     @include container();
+
 }
 
 .page {
@@ -265,7 +269,20 @@ article {
         text-align: center;
         @include full;
         padding: gutter();
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: -1;
+          height: 100%;
+          background: darken($brand-primary, 5%);
+          width: 120vw;
+          left: -20vw;
+          top: 0;
+        }
     }
+
 
     .entry-content {
         padding: gutter();
@@ -331,7 +348,17 @@ blockquote {
 .front-testimonials {
     @include container;
     background: $gray-lighter;
-
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      background: darken($gray-lighter, 5%);
+      width: 120vw;
+      left: -20vw;
+    }
     .jetpack-testimonial {
         padding: gutter(6);
         @include susy-breakpoint(800px, 12) {
@@ -359,6 +386,17 @@ blockquote {
     @include susy-breakpoint(800px, 12) {
         max-height: 325px;
         background: $brand-primary;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 100%;
+          z-index: -1;
+          max-height: 325px;
+          background: darken($brand-primary, 5%);
+          width: 100vw;
+          left: 0;
+        }
 
         .content {
             @include span(7);
