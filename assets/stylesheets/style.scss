@@ -13,10 +13,8 @@ Tags:
 Apps4Clubz is created by the theme generator at http://components.underscores.me/, (C) 2015-2016 Automattic, Inc.
 Components is distributed under the terms of the GNU GPL v2 or later.
 */
-
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
 @import "susy";
-
 $gray-dark: #373a3c !default;
 $gray: #55595c !default;
 $gray-light: #818a91 !default;
@@ -33,383 +31,429 @@ $font-family-sans-serif: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI'
 $font-family-serif: 'Roboto Slab', Georgia, 'Times New Roman', Times, serif;
 $screen-md: 45rem;
 $screen-lg: 60rem;
-
-
-$susy: (
-  columns: 12,
-  container: 1366px,
-  gutters: 1/4,
-  global-box-sizing: border-box
-);
+$susy: ( columns: 12, container: 1366px, gutters: 1/4, global-box-sizing: border-box );
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    hyphens: auto;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
 }
 
 body {
-  font-family: $font-family-serif;
-  text-rendering: optimizeLegibility;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333333;
-  background: $white;
-  font-weight: 300;
+    font-family: $font-family-sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background: $white;
+    font-weight: 300;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
-h1, h2, h3 {
-  font-weight: 400;
-  font-family: $font-family-serif;
+h1,
+h2,
+h3 {
+    font-weight: 400;
+    font-family: $font-family-serif;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  letter-spacing: -1.32px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -1.32px;
 }
 
 h2 {
-  font-size: 2.25rem;
-  font-weight: 300;
+    font-size: 2.25rem;
+    font-weight: 300;
 }
 
 h3 {
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.125rem;
-  text-transform: uppercase;
-  color: $brand-primary;
-  @media (min-width: $screen-md) {
-    font-size: 1.25rem;
-  }
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    color: $brand-primary;
+    @media (min-width: $screen-md) {
+        font-size: 1.25rem;
+    }
 }
 
 a {
-  color: $brand-primary;
-  &:hover { color: $brand-success; }
+    color: $brand-primary;
+
+    &:hover {
+        color: $brand-success;
+    }
 }
 
-p, li {
-}
+li,
+p {}
 
 .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }
 
-.menu-toggle { display: block; width: 100%; }
+.menu-toggle {
+    display: block;
+    width: 100%;
+}
 
 .button {
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
-  line-height: 1.5em;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  user-select: none;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-decoration: none;
-  color: $gray-lightest;
-  border: 2px solid $brand-primary;
-  background: $brand-primary;
-  outline: none;
-
-  &:hover {
-    border-color: darken($brand-primary, 10%);
-    background: darken($brand-primary, 10%);
-  }
-
-  &.button-outline {
-    color: $brand-primary;
-    background: transparent;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    line-height: 1.5em;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+    color: $gray-lightest;
+    border: 2px solid $brand-primary;
+    background: $brand-primary;
+    outline: none;
 
     &:hover {
-      color: darken($brand-primary, 10%);
-      border-color: darken($brand-primary, 10%);
+        border-color: darken($brand-primary, 10%);
+        background: darken($brand-primary, 10%);
     }
-  }
 
-  &.button-inverted {
-    color: $brand-primary;
-    border-color: $white;
-    background: $white;
+    &.button-outline {
+        color: $brand-primary;
+        background: transparent;
 
-    &:hover {
-      color: darken($brand-primary, 10%);
-      border-color: $gray-lighter;
-      background: $gray-lighter;
+        &:hover {
+            color: darken($brand-primary, 10%);
+            border-color: darken($brand-primary, 10%);
+        }
     }
-  }
-  &.button-block-screen-sm {
-    @media (max-width: $screen-md) {
-      display: block;
-      margin-bottom: 1em;
+
+    &.button-inverted {
+        color: $brand-primary;
+        border-color: $white;
+        background: $white;
+
+        &:hover {
+            color: darken($brand-primary, 10%);
+            border-color: $gray-lighter;
+            background: $gray-lighter;
+        }
     }
-  }
+
+    &.button-block-screen-sm {
+        @media (max-width: $screen-md) {
+            display: block;
+            margin-bottom: 1em;
+        }
+    }
 }
 
 .site-header {
-  @include container();
-  @include susy-breakpoint(800px, 12){
-    .site-branding { @include span(4 of 12); }
-    .main-navigation { @include span(8 of 12 last); }
-  }
+    @include container();
+    @include susy-breakpoint(800px, 12) {
+        .site-branding {
+            @include span(4 of 12);
+        }
+
+        .main-navigation {
+            @include span(8 of 12 last);
+        }
+    }
 }
 
 .site-branding {
-  // display: none;
-  h1 {
-    font-size: 2rem;
-    padding-left: gutter();
-  }
+    // display: none;
+    h1 {
+        font-size: 2rem;
+        padding-left: gutter();
+    }
 }
 
 .main-navigation {
-  padding: gutter();
-  ul {
-    display: none;
-    list-style-type: none;
-    padding-left: 0;
-  }
-  li {
-    padding: none;
-  }
-  a {
-    font-family: $font-family-sans-serif;
-    font-weight: 500;
-    text-decoration: none;
-  }
-  @media screen and (min-width: 800px){
+    padding: gutter();
+
     ul {
-      text-align: right;
+        display: none;
+        list-style-type: none;
+        padding-left: 0;
     }
+
     li {
-      display: inline-block;
-      padding: gutter(24);
+        padding: none;
     }
-  }
+
+    a {
+        font-family: $font-family-sans-serif;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    @media screen and (min-width: 800px) {
+        ul {
+            text-align: right;
+        }
+
+        li {
+            display: inline-block;
+            padding: gutter(24);
+        }
+    }
 }
 
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 800px) {
-  .menu-toggle {
-    display: none;
-  }
-  .main-navigation ul {
+.main-navigation.toggled ul,
+.menu-toggle {
     display: block;
-  }
 }
+@media screen and (min-width: 800px) {
+    .menu-toggle {
+        display: none;
+    }
 
-
-
-
-
-
-
-
-
-
+    .main-navigation ul {
+        display: block;
+    }
+}
 
 .comment-navigation,
-.posts-navigation,
-.post-navigation {
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+.post-navigation,
+.posts-navigation {
+    .site-main & {
+        margin: 0 0 1.5em;
+        overflow: hidden;
+    }
+
+    .nav-previous {
+        float: left;
+        width: 50%;
+    }
+
+    .nav-next {
+        float: right;
+        text-align: right;
+        width: 50%;
+    }
 }
 
-
 article {
-  @include container();
+    @include container();
 }
 
 .page {
-  .entry-header {
+    .entry-header {
+        background: $brand-primary;
+        color: $white;
+        text-align: center;
+        @include full;
+        padding: gutter();
+    }
+
+    .entry-content {
+        padding: gutter();
+        @include full;
+        @include susy-breakpoint(800px, 12) {
+             @include span(10);
+            @include push(1);
+        }
+    }
+
+    .entry-sidebar ~ .entry-content {
+        padding: gutter();
+        @include span(12);
+        @include susy-breakpoint(800px, 12) {
+             @include span(7 of 12 last);
+        }
+    }
+
+    .entry-sidebar {
+        padding: gutter();
+        @include span(12);
+        @include susy-breakpoint(800px, 12) {
+             @include span(5);
+        }
+    }
+
+    .entry-footer {
+        padding: gutter();
+        @include full;
+        border-top: 1px solid $gray-lighter;
+    }
+}
+
+.site-info {
+    padding: gutter();
     background: $brand-primary;
     color: $white;
     text-align: center;
-    @include full;
-    padding: gutter();
-  }
+    font-size: 80%;
 
-  .entry-content {
-    padding: gutter();
-    @include full;
-    @include susy-breakpoint(800px, 12){
-      @include span(10);
-      @include push(1);
+    a {
+        color: $white;
     }
-  }
-
-  .entry-sidebar ~ .entry-content  {
-    padding: gutter();
-    @include span(12);
-    @include susy-breakpoint(800px, 12){
-      @include span(7 of 12 last);
-    }
-  }
-
-  .entry-sidebar {
-    padding: gutter();
-    @include span(12);
-    @include susy-breakpoint(800px, 12){
-      @include span(5);
-    }
-  }
-
-  .entry-footer{
-    padding: gutter();
-    @include full;
-    border-top: 1px solid $gray-lighter;
-  }
 }
-
-
-
-
-
-.site-info {
-  padding: gutter();
-  background: $brand-primary;
-  color: $white;
-  text-align: center;
-  font-size: 80%;
-  a { color: $white; }
-}
-
-
-
-
-
 
 blockquote {
-  margin: 0;
-  font-style: italic;
-  p { margin-top: 0; }
-  cite {
-    font-style: normal;
-    font-size: 0.9rem;
-    text-align: right;
-    font-family: $font-family-sans-serif;
-  }
+    margin: 0;
+    font-style: italic;
+
+    p {
+        font-family: $font-family-serif;
+        margin-top: 0;
+    }
+
+    cite {
+        font-style: normal;
+        font-size: 0.9rem;
+        text-align: right;
+        font-family: $font-family-sans-serif;
+    }
 }
-
-
-
 
 .front-testimonials {
-  @include container;
-  background: $gray-lighter;
-  .jetpack-testimonial {
-    padding: gutter(6);
-    @include susy-breakpoint(800px, 12){
-      @include span(4);
-      padding: gutter();
-      &:nth-child(3n){ @include span(4 last); }
+    @include container;
+    background: $gray-lighter;
+
+    .jetpack-testimonial {
+        padding: gutter(6);
+        @include susy-breakpoint(800px, 12) {
+             @include span(4);
+            padding: gutter();
+
+            &:nth-child(3n) {
+                @include span(4 last);
+            }
+        }
     }
-  }
 }
 
-
-
-
-
-
-.homepage-features {
-  @include container();
-  padding: gutter();
-  .homepage-feature {
-    // padding: gutter();
+.homepage-header {
+  &:after { content: ""; display: table; clear: both;}
+}
+.homepage-banner {
+    background: $brand-primary;
+    max-height: 300px;
+    @include container();
+    padding: gutter();
     @include susy-breakpoint(800px, 12){
-      @include span(4);
-      &:nth-child(3n){ @include span(4 last); }
-      &:last-child{
-        @include span(8);
-        @include push(2);
-        text-align: center;
+      .content {
+        @include span(6);
+      }
+      .demo {
+        @include span(6 last);
+        position: relative;
+        .phone-slideshow {
+          width: 100%;
+          height: 600px;
+          background: red;
+          position: relative;
+        }
       }
     }
-  }
+}
+
+.homepage-lede {
+    @include container();
+    padding: gutter();
+    .content { font-size: 1.3rem; }
+    @include susy-breakpoint(800px, 12) {
+        .content {
+            @include span(6);
+        }
+    }
+}
+
+.homepage-features {
+    @include container();
+    padding: gutter();
+
+    .homepage-feature {
+        // padding: gutter();
+        @include susy-breakpoint(800px, 12) {
+             @include span(4);
+
+            &:nth-child(3n) {
+                @include span(4 last);
+            }
+
+            &:last-child {
+                @include span(6);
+                @include push(3);
+                text-align: center;
+            }
+        }
+    }
 }
 
 .homepage-feature {
-  h2 {
-    font-size: 1.4rem;
-    color: $brand-primary;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  h3 {
-    margin-top: 0;
-    font-size: 0.9rem;
-    color: $gray-dark;
-  }
+    h2 {
+        font-size: 1.4rem;
+        color: $brand-primary;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 0.9rem;
+        color: $gray-dark;
+    }
+
+    p {
+        font-family: $font-family-sans-serif;
+    }
 }
 
-
-
-
-
 .form-row {
-  margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
 .control-label {
-  display: block;
-  margin: 0.25em 0;
-  font-family: $font-family-sans-serif;
-  .form-row-disabled & {
-    color: $gray-light;
-  }
+    display: block;
+    margin: 0.25em 0;
+    font-family: $font-family-sans-serif;
+
+    .form-row-disabled & {
+        color: $gray-light;
+    }
 }
 
 .help-text {
-  font-size: 0.8em;
-  margin: 0.25em 0 0.5em;
-  padding: 0;
+    font-size: 0.8em;
+    margin: 0.25em 0 0.5em;
+    padding: 0;
 }
 
 .form-control {
-  font-family: $font-family-sans-serif;
-  background: $white;
-  width: 100%;
-  font-size: 16px;
-  height: 40px;
-  padding: 0 0.5em;
-  -webkit-appearance: none;
-  outline: 0;
-  border: 1px solid $gray-dark;
-  &:focus {
-    border-color: $brand-primary;
-  }
-  &:disabled {
-    color: $gray-light;
-    background: $gray-lightest;
-    border-color: $gray-light;
-  }
+    font-family: $font-family-sans-serif;
+    background: $white;
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 0.5em;
+    -webkit-appearance: none;
+    outline: 0;
+    border: 1px solid $gray-dark;
+
+    &:focus {
+        border-color: $brand-primary;
+    }
+
+    &:disabled {
+        color: $gray-light;
+        background: $gray-lightest;
+        border-color: $gray-light;
+    }
 }

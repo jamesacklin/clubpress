@@ -45,9 +45,9 @@ menu{display:block}
 canvas{display:inline-block}
 template{display:none}
 [hidden]{display:none}
-html{box-sizing:border-box}
-*,*:before,*:after{box-sizing:inherit}
-body{font-family:"Roboto Slab",Georgia,"Times New Roman",Times,serif;text-rendering:optimizeLegibility;font-size:16px;line-height:1.6;color:#333;background:#fff;font-weight:300}
+html{box-sizing:border-box;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}
+*,*:after,*:before{box-sizing:inherit}
+body{font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;text-rendering:optimizeLegibility;font-size:16px;line-height:1.6;color:#333;background:#fff;font-weight:300}
 img{max-width:100%}
 h1,h2,h3{font-weight:400;font-family:"Roboto Slab",Georgia,"Times New Roman",Times,serif}
 h1{font-size:2.5rem;font-weight:400;letter-spacing:-1.32px}
@@ -70,10 +70,10 @@ a:hover{color:#0275d8}
 .main-navigation ul{display:none;list-style-type:none;padding-left:0}
 .main-navigation li{padding:none}
 .main-navigation a{font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-weight:500;text-decoration:none}
-.menu-toggle,.main-navigation.toggled ul{display:block}
-.site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation{margin:0 0 1.5em;overflow:hidden}
-.comment-navigation .nav-previous,.posts-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:50%}
-.comment-navigation .nav-next,.posts-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:50%}
+.main-navigation.toggled ul,.menu-toggle{display:block}
+.site-main .comment-navigation,.site-main .post-navigation,.site-main .posts-navigation{margin:0 0 1.5em;overflow:hidden}
+.comment-navigation .nav-previous,.post-navigation .nav-previous,.posts-navigation .nav-previous{float:left;width:50%}
+.comment-navigation .nav-next,.post-navigation .nav-next,.posts-navigation .nav-next{float:right;text-align:right;width:50%}
 article{max-width:1366px;margin-left:auto;margin-right:auto}
 article:after{content:" ";display:block;clear:both}
 .page .entry-header{background:#37b34a;color:#fff;text-align:center;clear:both;width:100%;float:left;margin-left:0;margin-right:0;padding:1.6949152542%}
@@ -84,15 +84,22 @@ article:after{content:" ";display:block;clear:both}
 .site-info{padding:1.6949152542%;background:#37b34a;color:#fff;text-align:center;font-size:80%}
 .site-info a{color:#fff}
 blockquote{margin:0;font-style:italic}
-blockquote p{margin-top:0}
+blockquote p{font-family:"Roboto Slab",Georgia,"Times New Roman",Times,serif;margin-top:0}
 blockquote cite{font-style:normal;font-size:.9rem;text-align:right;font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .front-testimonials{max-width:1366px;margin-left:auto;margin-right:auto;background:#eceeef}
 .front-testimonials:after{content:" ";display:block;clear:both}
 .front-testimonials .jetpack-testimonial{padding:3.4482758621%}
+.homepage-header:after{content:"";display:table;clear:both}
+.homepage-banner{background:#37b34a;max-height:300px;max-width:1366px;margin-left:auto;margin-right:auto;padding:1.6949152542%}
+.homepage-banner:after{content:" ";display:block;clear:both}
+.homepage-lede{max-width:1366px;margin-left:auto;margin-right:auto;padding:1.6949152542%}
+.homepage-lede:after{content:" ";display:block;clear:both}
+.homepage-lede .content{font-size:1.3rem}
 .homepage-features{max-width:1366px;margin-left:auto;margin-right:auto;padding:1.6949152542%}
 .homepage-features:after{content:" ";display:block;clear:both}
 .homepage-feature h2{font-size:1.4rem;color:#37b34a;margin-bottom:0;padding-bottom:0}
 .homepage-feature h3{margin-top:0;font-size:.9rem;color:#373a3c}
+.homepage-feature p{font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .form-row{margin:0 0 1.5em}
 .control-label{display:block;margin:.25em 0;font-family:"Roboto",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 .form-row-disabled .control-label{color:#818a91}
@@ -108,9 +115,13 @@ blockquote cite{font-style:normal;font-size:.9rem;text-align:right;font-family:"
 .page .entry-sidebar{width:40.6779661017%;float:left;margin-right:1.6949152542%}
 .front-testimonials .jetpack-testimonial{width:32.2033898305%;float:left;margin-right:1.6949152542%;padding:1.6949152542%}
 .front-testimonials .jetpack-testimonial:nth-child(3n){width:32.2033898305%;float:right;margin-right:0}
+.homepage-banner .content{width:49.1525423729%;float:left;margin-right:1.6949152542%}
+.homepage-banner .demo{width:49.1525423729%;float:right;margin-right:0;position:relative}
+.homepage-banner .demo .phone-slideshow{width:100%;height:600px;background:red;position:relative}
+.homepage-lede .content{width:49.1525423729%;float:left;margin-right:1.6949152542%}
 .homepage-features .homepage-feature{width:32.2033898305%;float:left;margin-right:1.6949152542%}
 .homepage-features .homepage-feature:nth-child(3n){width:32.2033898305%;float:right;margin-right:0}
-.homepage-features .homepage-feature:last-child{width:66.1016949153%;float:left;margin-right:1.6949152542%;margin-left:16.9491525424%;text-align:center}
+.homepage-features .homepage-feature:last-child{width:49.1525423729%;float:left;margin-right:1.6949152542%;margin-left:25.4237288136%;text-align:center}
 }@media screen and (min-width:800px){.main-navigation ul{text-align:right}
 .main-navigation li{display:inline-block;padding:.8403361345%}
 .menu-toggle{display:none}
