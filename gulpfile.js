@@ -48,7 +48,7 @@ var styleDestination        = './'; // Path to place the compiled CSS file.
 // Defualt set to root folder.
 
 // JS Vendor related.
-var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
+var jsVendorSRC             = './bower_components/**/src/**/*.js'; // Path to JS vendor folder.
 var jsVendorDestination     = './assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
@@ -65,7 +65,7 @@ var imagesDestination       = './assets/img/'; // Destination folder of optimize
 
 // Watch files paths.
 var styleWatchFiles         = './assets/stylesheets/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var vendorJSWatchFiles      = './assets/js/vendor/*.js'; // Path to all vendor JS files.
+var vendorJSWatchFiles      = './bower_components/**/src/**/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles      = './assets/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
 
@@ -220,6 +220,7 @@ gulp.task( 'browser-sync', function() {
   */
  gulp.task( 'vendorsJs', function() {
   gulp.src( jsVendorSRC )
+    .pipe( filter( '**/*.js' ) )
     .pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )

@@ -1,0 +1,21 @@
+{
+  "name": "clubpress",
+  "description": "",
+  "main": "",
+  "authors": [
+    "jamesacklin"
+  ],
+  "license": "GPL-2.0",
+  "homepage": "https://github.com/jamesacklin/clubpress",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "unslider": "^2.0.3"
+  }
+}

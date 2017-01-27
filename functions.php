@@ -143,9 +143,18 @@ add_action( 'widgets_init', 'clubpress_widgets_init' );
 function clubpress_scripts() {
 	wp_enqueue_style( 'clubpress-style', get_stylesheet_uri() );
 
+	// deregister default jQuery included with Wordpress
+	wp_deregister_script( 'jquery' );
+
+	$jquery_cdn = '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js';
+	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '2.2.4', true );
+
+
 	wp_enqueue_script( 'clubpress-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'clubpress-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'clubpress-vendors', get_template_directory_uri() . '/assets/js/vendors.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
