@@ -422,9 +422,11 @@ blockquote {
 
 .homepage-lede {
     @include container();
-    padding: gutter();
+    padding: gutter(4) gutter();
 
     .content {
+      hyphens: none;
+      h2 {color: $gray; font-weight: 300; line-height: 1.2; }
         font-size: 1.3rem;
     }
     @include susy-breakpoint(800px, 12) {
@@ -436,7 +438,6 @@ blockquote {
     }
     @include susy-breakpoint(1000px, 12) {
         .content {
-
             @include span(6);
             @include push(3);
         }
@@ -656,4 +657,27 @@ blockquote {
 .unslider-arrow.next {
     left: auto;
     right: 20px;
+}
+
+.unslider-nav ol {
+  position: absolute;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+.unslider-nav ol li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 2px solid $brand-primary;
+  cursor: pointer;
+}
+.unslider-nav ol li.unslider-active {
+  background: $brand-primary;
+  cursor: default;
 }

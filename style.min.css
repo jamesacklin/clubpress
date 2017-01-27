@@ -101,9 +101,10 @@ blockquote cite{font-style:normal;font-size:.9rem;text-align:right;font-family:"
 .slider .slide p{font-family:"Roboto Slab",Georgia,"Times New Roman",Times,serif;font-weight:500}
 .slider .slide .column{padding:1.6949152542%}
 .slider .slide .column:nth-child(1){text-align:center}
-.homepage-lede{max-width:1366px;margin-left:auto;margin-right:auto;padding:1.6949152542%}
+.homepage-lede{max-width:1366px;margin-left:auto;margin-right:auto;padding:5.2631578947% 1.6949152542%}
 .homepage-lede:after{content:" ";display:block;clear:both}
-.homepage-lede .content{font-size:1.3rem}
+.homepage-lede .content{-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;font-size:1.3rem}
+.homepage-lede .content h2{color:#55595c;font-weight:300;line-height:1.2}
 .homepage-features{max-width:1366px;margin-left:auto;margin-right:auto;padding:1.6949152542%}
 .homepage-features:after{content:" ";display:block;clear:both}
 .homepage-feature h2{font-size:1.4rem;margin-bottom:0;padding-bottom:0}
@@ -136,6 +137,9 @@ blockquote cite{font-style:normal;font-size:.9rem;text-align:right;font-family:"
 .unslider li,.unslider ol,.unslider ul{list-style:none;margin:0;padding:0;border:0}
 .unslider-arrow{position:absolute;left:20px;z-index:2;cursor:pointer}
 .unslider-arrow.next{left:auto;right:20px}
+.unslider-nav ol{position:absolute;list-style:none;text-align:center;width:100%}
+.unslider-nav ol li{display:inline-block;width:6px;height:6px;margin:0 4px;background:transparent;border-radius:5px;overflow:hidden;text-indent:-999em;border:2px solid #36b349;cursor:pointer}
+.unslider-nav ol li.unslider-active{background:#36b349;cursor:default}
 @media(min-width:45rem){h3{font-size:1.25rem}
 }@media(min-width:800px){.site-header .site-branding{width:32.2033898305%;float:left;margin-right:1.6949152542%}
 .site-header .main-navigation{width:66.1016949153%;float:right;margin-right:0}

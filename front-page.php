@@ -47,6 +47,7 @@ get_header(); ?>
       <!-- Homepage lede, hard-coded for now -->
       <div class="homepage-lede">
         <div class="content">
+          <h2>The preferred solution for club-to-member communications.</h2>
           <p>Build member loyalty and grow membership with a tailor-made app customized to fit your organization. Whether you manage a small group or a huge club, Apps4Clubz streamlines your club’s member operations and treats your members to superior service.</p>
           <a href="#" class="button">Contact Us</a>
         </div>
@@ -92,7 +93,7 @@ get_header(); ?>
       autoplay: true,
       speed: 750,
       delay: 5000,
-      nav: false,
+      nav: true,
       arrows: false,
       // animateHeight: true,
     });
