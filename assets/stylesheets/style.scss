@@ -22,7 +22,7 @@ $gray-lighter: #eceeef !default;
 $gray-lightest: #f7f7f9 !default;
 $white: #ffffff !default;
 $brand-primary: #36B349 !default;
-$brand-success: #0275d8 !default;
+$brand-success: darken($brand-primary, 10%) !default;
 $brand-info: #5bc0de !default;
 $brand-warning: #f0ad4e !default;
 $brand-danger: #d9534f !default;
@@ -99,10 +99,14 @@ h3 {
 
 a {
     color: $brand-primary;
-
+    text-decoration: none;
     &:hover {
-        color: $brand-success;
+      text-decoration: underline;
     }
+    .current-menu-item & {
+      text-decoration: underline;
+    }
+
 }
 
 .lede {
@@ -141,11 +145,13 @@ p {}
     border: 2px solid $brand-primary;
     background: $brand-primary;
     outline: none;
+    color: $white;
 
     &:hover {
         color: $gray-lighter;
         border-color: darken($brand-primary, 10%);
         background: darken($brand-primary, 10%);
+        text-decoration: none;
     }
 
     &.button-outline {
@@ -215,7 +221,6 @@ p {}
     a {
         font-family: $font-family-sans-serif;
         font-weight: 500;
-        text-decoration: none;
     }
     @media screen and (min-width: 800px) {
         ul {
@@ -330,6 +335,7 @@ article {
 
     a {
         color: $white;
+        &:hover { color: $white; text-decoration: underline;}
     }
 }
 
@@ -411,7 +417,7 @@ blockquote {
         }
 
         .column {
-          padding: gutter();
+          padding: gutter() gutter() 0;
           &:nth-child(1){ text-align: center; }
           @media screen and (min-width: 800px){
             &:nth-child(2) { flex-basis: 40%; }
@@ -427,7 +433,7 @@ blockquote {
     .content {
       hyphens: none;
       h2 {color: $gray; font-weight: 300; line-height: 1.2; }
-        font-size: 1.3rem;
+      font-size: 1.3rem;
     }
     @include susy-breakpoint(800px, 12) {
         .content {
