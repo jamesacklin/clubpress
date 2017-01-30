@@ -32,7 +32,7 @@ get_header(); ?>
                     <div class="column">
                       <h2><?php the_sub_field( 'slide_header' ); ?></h2>
                       <p><?php the_sub_field( 'slide_text' ); ?></p>
-                      <p><a href="<?php the_sub_field( 'button_link' ); ?>" class="button button-inverted"><?php the_sub_field( 'button_text' ); ?></a></p>
+                      <a href="<?php the_sub_field( 'button_link' ); ?>" class="button button-inverted"><?php the_sub_field( 'button_text' ); ?></a>
                     </div>
                   </div>
                 </li>
@@ -94,7 +94,7 @@ get_header(); ?>
       speed: 750,
       delay: 5000,
       nav: true,
-      arrows: false,
+      arrows: true,
       // animateHeight: true,
     });
     $('.slider').hover(function(){

@@ -43,18 +43,27 @@ get_header(); ?>
 	<?php endif; ?>
 
 	<?php if ( have_posts() ) : ?>
+		<div id="primary" class="content-area">
+				<article class="page">
+						<div class="entry-header">
+							<h1 class="entry-title"><?php
+								if ( isset( $jetpack_options['page-title'] ) && '' != $jetpack_options['page-title'] )
+									echo esc_html( $jetpack_options['page-title'] );
+								else
+									esc_html_e( 'Testimonials', 'clubpress' );
+							?></h1>
+						</div>
+					<div class="entry-content">
+						<p class="lede" style="text-align: center;">Clients say it best...</p>
 
-		<div id="grid-view" class="grid-area">
-			<div class="grid-wrapper clear">
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<div class="grid">
-						<?php get_template_part( 'components/features/testimonials/content', 'testimonials' ); ?>
+						<div class="testimonials">
+							<?php while ( have_posts() ) : the_post(); ?>
+								<?php get_template_part( 'components/features/testimonials/content', 'testimonials' ); ?>
+							<?php endwhile; ?>
+						</div>
 					</div>
-				<?php endwhile; ?>
-
-			</div>
+				</article>
+			</main>
 		</div>
 	<?php
 		the_posts_navigation();
