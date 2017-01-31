@@ -92,7 +92,7 @@ get_header(); ?>
     $('.slider').unslider({
       autoplay: true,
       speed: 750,
-      delay: 5000,
+      delay: 7000,
       nav: true,
       arrows: true,
       // animateHeight: true,
