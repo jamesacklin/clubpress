@@ -1,4 +1,4 @@
-/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,300i,400,400i");/*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,footer,header,nav,section{display:block}
 h1{font-size:2em;margin:.67em 0}
