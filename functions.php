@@ -156,6 +156,8 @@ function clubpress_scripts() {
 
 	wp_enqueue_script( 'clubpress-vendors', get_template_directory_uri() . '/assets/js/vendors.min.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'clubpress-custom', get_template_directory_uri() . '/assets/js/custom.min.js', array(), '20151215', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -181,3 +183,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Shortcode for including a PHP file.
+ */
+ function contact_form() {
+	 ob_start();
+	 get_template_part( 'components/features/contact-form/contact-form');
+	 return ob_get_clean();
+  // return $form;
+ }
+
+ //register the Shortcode handler
+ add_shortcode('contact_form', 'contact_form');
