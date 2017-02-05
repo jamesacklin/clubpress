@@ -49,7 +49,7 @@ get_header(); ?>
         <div class="content">
           <h2>The preferred solution for club-to-member communications.</h2>
           <p>Build member loyalty and grow membership with a tailor-made app customized to fit your organization. Whether you manage a small group or a huge club, Apps4Clubz streamlines your club’s member operations and treats your members to superior service.</p>
-          <a href="#" class="button">Contact Us</a>
+          <a href="/contact-us/" class="button">Contact Us</a>
         </div>
       </div>
 
