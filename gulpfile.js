@@ -175,17 +175,17 @@ gulp.task( 'browser-sync', function() {
       errLogToConsole: true,
       includePaths: ['node_modules/susy/sass'],
       // outputStyle: 'compact',
-      //outputStyle: 'compressed',
+      outputStyle: 'compressed',
       // outputStyle: 'nested',
-      outputStyle: 'expanded',
+      // outputStyle: 'expanded',
       precision: 10
     } ) )
     .on('error', console.error.bind(console))
-    .pipe( sourcemaps.write( { includeContent: false } ) )
-    .pipe( sourcemaps.init( { loadMaps: true } ) )
+    // .pipe( sourcemaps.write( { includeContent: false } ) )
+    // .pipe( sourcemaps.init( { loadMaps: true } ) )
     .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
-    .pipe( sourcemaps.write ( styleDestination ) )
+    // .pipe( sourcemaps.write ( styleDestination ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
 
