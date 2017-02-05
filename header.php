@@ -16,7 +16,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<?php if( is_single() ) { ?>
+	<link rel="amphtml" href="https://mercury.postlight.com/amp?url=<?php echo urlencode(get_the_permalink()); ?>">
+<?php } ?>
 <?php wp_head(); ?>
 </head>
 
